@@ -1,6 +1,7 @@
 #
 # generates the sum of all integers that are a multiple of 3 or 5 between 0 and the inputted max
-# @max: is a positive integer
+# @maximum: is a positive integer
+#
 
 
 def euler1(maximum):

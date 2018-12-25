@@ -1,3 +1,9 @@
+#
+# generates the sum of all even fibonacci numbers from 0 to the  maximum
+# @maximum: is a positive integer
+#
+
+
 def even_fib (maximum):
     first = 1
     second = 1
