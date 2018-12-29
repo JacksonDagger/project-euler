@@ -20,7 +20,7 @@ class grid:
 
             self.width = len(self.gridlist[0])
             for x in self.gridlist:
-                if len(x) != width
+                if len(x) != self.width:
                     raise NotAGridException.NotAGridException
             self.height = len(self.gridlist)
         else:
@@ -61,9 +61,9 @@ class grid:
     def get_local_product(self, x, y, size):
         retval = 0
         roomup = y + 1 - size >= 0
-        roomdn = y + size <= height
+        roomdn = y + size <= self.height
         roomleft = x + 1 - size >= 0
-        roomright = x + size <= width
+        roomright = x + size <= self.width
 
         #up
         if roomup:

@@ -1,2 +1,2 @@
-class NotAGridException
+class NotAGridException:
     pass
