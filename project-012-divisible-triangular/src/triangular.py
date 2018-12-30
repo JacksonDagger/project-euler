@@ -1,3 +1,6 @@
+#
+# returns the smallest triangle number with more than numdiv integer divisors
+#
 def triangle_divisors(numdiv):
     n = 0
     trinum = 0
@@ -8,11 +11,18 @@ def triangle_divisors(numdiv):
         trinum += n
 
 
+#
+# returns the nth triangle number
+#
 def triangle_number(n):
     if n % 2 == 0:
         return n / 2 * (n + 1)
     return (n / 2 + 1) * n
 
+
+#
+# returns the number of integer divisors of dividend
+#
 def get_num_divisors(dividend):
     n = 1
     numdiv = 0
