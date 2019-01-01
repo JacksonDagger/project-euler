@@ -8,7 +8,7 @@ class Test(unittest.TestCase):
     def test_02(self):
         self.assertEqual(10, maxpath.maxsum("test02.txt"))
 
-
+print(maxpath.maxsum("challenge.txt"))
 
 if __name__ == '__main__':
     unittest.main()
