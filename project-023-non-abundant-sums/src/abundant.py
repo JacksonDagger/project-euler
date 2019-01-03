@@ -48,17 +48,21 @@ def dfunc(n):
 # returns the sum of all numbers that cannot be made from the sum of two abundant numbers
 #
 def sum_non_abundant_sum():
-    abnums = generate_abundant_numbers(20162)
+    abnums = generate_abundant_numbers(28123)
     retval = 0
-    for x in range(20162):
-        nosum = True
+
+
+    possiblenums = range(28123)
+
+    for x in abnums:
         for y in abnums:
-            if x - y in abnums:
-                nosum = False
-                break
-        if nosum:
-            retval += x
+            if x + y in possiblenums:
+                possiblenums.remove(x + y)
+
+    for x in possiblenums:
+        retval += x
 
     return retval
+
 
 print(sum_non_abundant_sum())
