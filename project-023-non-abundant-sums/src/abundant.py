@@ -43,26 +43,33 @@ def dfunc(n):
     dsum -= n
     return dsum
 
+#
+# returns true if n is abundant
+#
+def isabundant(n):
+    return dfunc(n) > n
+
 
 #
 # returns the sum of all numbers that cannot be made from the sum of two abundant numbers
 #
 def sum_non_abundant_sum():
-    abnums = generate_abundant_numbers(28123)
-    retval = 0
-
-
-    possiblenums = range(28123)
-
-    for x in abnums:
-        for y in abnums:
-            if x + y in possiblenums:
-                possiblenums.remove(x + y)
-
-    for x in possiblenums:
-        retval += x
-
-    return retval
-
+    ablist = generate_abundant_numbers(28111)
+    nonabsum = range(28123)
+    for x in range(len(ablist)):
+        for y in range(x, len(ablist)):
+            tempsum = ablist[x] + ablist[y]
+            if tempsum > 28123:
+                break
+            if tempsum in nonabsum:
+                nonabsum.remove(tempsum)
+    retsum = 0
+    for x in nonabsum:
+        retsum += x
+    return retsum
 
 print(sum_non_abundant_sum())
+
+
+
+
