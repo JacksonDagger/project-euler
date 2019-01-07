@@ -4,7 +4,8 @@ def getlexperms(inlist):
     inlist.sort()
     retlist = []
     for x in inlist:
-        passlist = inlist
+        passlist = []
+        passlist.extend(inlist)
         passlist.remove(x)
         tempret = getlexperms(passlist)
         for y in tempret:
