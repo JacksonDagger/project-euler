@@ -76,6 +76,3 @@ def sum_non_abundant_sum():
 
 print(sum_non_abundant_sum())
 
-
-
-
