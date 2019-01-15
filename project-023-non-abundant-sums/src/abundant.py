@@ -35,7 +35,6 @@ def sum_non_abundant_sum():
 
     return retsum
 
+
 print(sum_non_abundant_sum())
-
-
 
