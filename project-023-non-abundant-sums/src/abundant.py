@@ -27,11 +27,11 @@ def sum_non_abundant_sum():
             for y in range(x, 28112):
                 if dfunc(y) > y:
                     ablist.append(y)
-                    break
+
         for ab in ablist:
             if x - ab in ablist:
                 retsum -= x
-                break
+                
 
     return retsum
 
